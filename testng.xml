@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BetaSuite" parallel="tests" thread-count="2" preserve-order="true">
+    <listeners>
+        <listener class-name="appium.generics.ProjectListeners"/>
+        <!--  <listener class-name="appium.generics.RetryListener"/>-->
+    </listeners>
+    <test verbose="2" name="Wisa Automation">
+        <parameter name="AUTOMATION_NAME" value="Appium"/>
+        <parameter name="DEVICE_NAME" value="Redmi 9 Prime(Sudha Yadav)"/>
+        <parameter name="PLATFORM_NAME" value="Android"/>
+        <parameter name="PLATFORM_VERSION" value="12"/>
+        <parameter name="appPackage" value="com.wisa.summit"/>
+        <parameter name="appActivity" value="com.wisa.summit.views.activity.SplashScreen"/>
+        <parameter name="app" value="E:\\wisa.apk"/>
+        <classes>
+            <class name="appium.scripts.SetupWizardTest"/>
+        </classes>
+    </test>
+</suite>
